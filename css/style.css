@@ -1,6 +1,6 @@
-/* GREEN #03381B */
+/* GREEN #407257 */
 /* ORANGE #C47A35 */
-/* PINK #FBECEB */
+/* PINK #EFDAD6 */
 /* OFF WHITE #FCF7F7 */
 
 body {
@@ -9,7 +9,6 @@ body {
 	color: rgba(0, 0, 0, .85);
 	margin: 0 auto;
 	line-height: 2em;
-	background: #FCF7F7;
 }
 
 b {
@@ -17,42 +16,90 @@ b {
 }
 
 header {
-	padding: 100px;
+	background: #EFDAD6;
+	padding: 150px 80px 80px 80px;
+	border-radius: 0 0px 2000px 0;
+	height: 270px;
+	margin-bottom: 300px;
+	
 }
 
 nav {
-	padding: 20px;
+	background: #EFDAD6;
+	padding: 10px 80px;
+	box-shadow: none;
+}
+
+nav a {
+	color: rgba(0, 0, 0, .85);
+	background: none;
+	border: none;
+}
+
+nav a:hover {
+	color: #407257;
+	border: none;
+	background: white;
 }
 
 h1, h2 {
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 800;
+	font-family: 'Shrikhand', cursive;
+	font-weight: 900;
 }
 
 h1 {
 	letter-spacing: 1px;
-	font-size: 4em;
+}
+
+h5 {
+	color: #407257;
+	font-size: 1em;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.portfolio-item {
+	float: left;
+	max-width: 300px;
+	margin: 100px 100px 0 0;
+	transition: all .5s;
+	opacity: .5;
+}
+
+.portfolio-item:hover {
+	transform: scale(1.2);
+}
+
+hr {
+	height: 3px;
+	border: 0;
+	background: #407257;
+	width: 70px;
+	margin: 0;
 }
 
 div.section {
 	margin: 0 auto;
-	padding: 40px;
-	width: 75%;
 }
 
 a {
-	background: #03381B;
-	color: #FCF7F7;
+	color: white;
 	text-decoration: none;
-	padding: 20px;
+	padding: 8px;
+	background: #C47A35;
+	transition: background 1s;
 }
 
 a:hover {
-	background: #C47A35;
+	color: #C47A35;
+	background: none;
 }
 
 footer {
 	margin: 0 auto;
 	padding: 40px;
-	background: #FBECEB;
+}
+
+.headshot {
+	height: 300px;
+	width: 300px;
 }
