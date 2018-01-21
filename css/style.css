@@ -1,0 +1,58 @@
+/* GREEN #03381B */
+/* ORANGE #C47A35 */
+/* PINK #FBECEB */
+/* OFF WHITE #FCF7F7 */
+
+body {
+	font-family: 'Cabin', sans-serif;
+	font-weight: 400;
+	color: rgba(0, 0, 0, .85);
+	margin: 0 auto;
+	line-height: 2em;
+	background: #FCF7F7;
+}
+
+b {
+	font-weight: 800;
+}
+
+header {
+	padding: 100px;
+}
+
+nav {
+	padding: 20px;
+}
+
+h1, h2 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
+}
+
+h1 {
+	letter-spacing: 1px;
+	font-size: 4em;
+}
+
+div.section {
+	margin: 0 auto;
+	padding: 40px;
+	width: 75%;
+}
+
+a {
+	background: #03381B;
+	color: #FCF7F7;
+	text-decoration: none;
+	padding: 20px;
+}
+
+a:hover {
+	background: #C47A35;
+}
+
+footer {
+	margin: 0 auto;
+	padding: 40px;
+	background: #FBECEB;
+}
