@@ -1,18 +1,13 @@
 /* GREEN #407257 */
 /* ORANGE #C47A35 */
 /* PINK #EFDAD6 */
-/* OFF WHITE #FCF7F7 */
 
 body {
 	font-family: 'Cabin', sans-serif;
 	font-weight: 400;
-	color: rgba(0, 0, 0, .85);
+	color: rgba(0, 0, 0, .9);
 	margin: 0 auto;
 	line-height: 2em;
-}
-
-b {
-	font-weight: 800;
 }
 
 header {
@@ -20,73 +15,96 @@ header {
 	padding: 150px 80px 80px 80px;
 	border-radius: 0 0px 2000px 0;
 	height: 270px;
-	margin-bottom: 300px;
+	margin-bottom: 280px;
 	
 }
 
 nav {
 	background: #EFDAD6;
-	padding: 10px 80px;
+	padding: 0 80px;
 	box-shadow: none;
 }
 
 nav a {
-	color: rgba(0, 0, 0, .85);
+	font-weight: 700;
+	color: rgba(0, 0, 0, .9);
+	padding: 50px 10px 20px 10px;
 	background: none;
 	border: none;
 }
 
-nav a:hover {
+nav a:hover, nav a.grn-text:hover {
 	color: #407257;
-	border: none;
-	background: white;
 }
 
-h1, h2 {
+.material-icons {
+	position: relative;
+	top: 5px;
+	display: inline-block !important;
+}
+
+h1, h2, h3 {
 	font-family: 'Shrikhand', cursive;
 	font-weight: 900;
-}
-
-h1 {
 	letter-spacing: 1px;
 }
 
-h5 {
+h3 {
+	font-size: 2.5em;
+	line-height: 1.25em;
+	letter-spacing: 1.25px;
+}
+
+.grn-text {
 	color: #407257;
+}
+
+h5 {
 	font-size: 1em;
 	font-weight: 700;
 	text-transform: uppercase;
 }
 .portfolio-item {
 	float: left;
-	max-width: 300px;
+	position: relative;
+	left: 140px;
+	bottom: 120px;
+	max-height: 300px;
 	margin: 100px 100px 0 0;
 	transition: all .5s;
-	opacity: .5;
-}
-
-.portfolio-item:hover {
-	transform: scale(1.2);
+	opacity: .3;
+	z-index: -1;
 }
 
 hr {
 	height: 3px;
 	border: 0;
-	background: #407257;
+	background: #C47A35;
 	width: 70px;
 	margin: 0;
 }
 
 div.section {
 	margin: 0 auto;
+	padding: 20px 100px 20px 20px;
 }
 
 a {
-	color: white;
-	text-decoration: none;
-	padding: 8px;
-	background: #C47A35;
-	transition: background 1s;
+	color: #C47A35;
+	transition: all .75s;
+}
+
+.row{
+	padding: 0 150px;
+}
+
+h3 a {
+	color: rgba(0, 0, 0, .9);
+}
+
+h3 a:hover {
+	color: rgba(0, 0, 0, .9);
+	transform: scale(1.6);
 }
 
 a:hover {
@@ -94,12 +112,50 @@ a:hover {
 	background: none;
 }
 
+a.button {
+	position: relative;
+	font-weight: 700;
+	left: 200px;
+	color: #407257;
+	text-decoration: none;
+	padding: 8px;
+	border: 2px solid #407257;
+}
+
+a.button:hover {
+	color: white;
+	background: #407257;
+}
+
 footer {
 	margin: 0 auto;
+	background: #C47A35;
 	padding: 40px;
 }
 
+footer a {
+	color: white;
+	letter-spacing: .75px;
+	padding: 5px;
+}
+
+footer a:hover {
+	color: white;
+}
+
+em {
+	margin-left: 10px;
+}
+
 .headshot {
-	height: 300px;
-	width: 300px;
+	height: 350px;
+	width: 350px;
+	float: left;
+	position: relative;
+	left: 110px;
+	bottom: 10px;
+	z-index: -1;
+	margin-left: 70px;
+	margin-right: 70px;
+	opacity: .7;
 }
