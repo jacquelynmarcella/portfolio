@@ -36,17 +36,12 @@ nav {
 	transition: all 1s;
 }
 
-<<<<<<< HEAD
-nav a:hover, nav a.grn-text:hover, footer a:hover {
-	color: #407257;
-=======
 .logo {
 	font-family: 'Shrikhand', cursive;
 	padding: 0;
 	margin: 0 20px;
 	color: rgba(0, 0, 0, .9);
 	font-size: 1.5em;
->>>>>>> master
 }
 
 .material-icons {
@@ -137,20 +132,13 @@ a.button {
 	border: 2px solid #407257;
 }
 
-<<<<<<< HEAD
-.orng-icon {
-	background: #C47A35;
-	color: white;
-	border-radius: 100px;
-	padding: 10px;
-=======
+
 .material-icons.orng-icon {
 	background: #C47A35;
 	color: white;
 	border-radius: 100px;
 	padding: 20px 12px;
 	line-height: 1em;
->>>>>>> master
 }
 
 a.button:hover {
