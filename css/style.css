@@ -13,9 +13,8 @@ body {
 header {
 	background: #EFDAD6;
 	padding: 150px 80px 80px 80px;
-	border-radius: 0 0px 2000px 0;
 	height: 270px;
-	margin-bottom: 280px;
+	margin-bottom: 300px;
 	
 }
 
@@ -33,13 +32,11 @@ nav a {
 	border: none;
 }
 
-nav a:hover, nav a.grn-text:hover {
+nav a:hover, nav a.grn-text:hover, footer a:hover {
 	color: #407257;
 }
 
 .material-icons {
-	position: relative;
-	top: 5px;
 	display: inline-block !important;
 }
 
@@ -113,13 +110,18 @@ a:hover {
 }
 
 a.button {
-	position: relative;
 	font-weight: 700;
-	left: 200px;
 	color: #407257;
 	text-decoration: none;
 	padding: 8px;
 	border: 2px solid #407257;
+}
+
+.orng-icon {
+	background: #C47A35;
+	color: white;
+	border-radius: 100px;
+	padding: 10px;
 }
 
 a.button:hover {
@@ -128,19 +130,16 @@ a.button:hover {
 }
 
 footer {
-	margin: 0 auto;
-	background: #C47A35;
+	display: inline-block;
+	background: #EFDAD6;
 	padding: 40px;
 }
 
 footer a {
-	color: white;
+	font-weight: 700;
+	color: rgba(0,0,0,.9);
 	letter-spacing: .75px;
 	padding: 5px;
-}
-
-footer a:hover {
-	color: white;
 }
 
 em {

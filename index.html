@@ -12,16 +12,25 @@
 </head>
 <body>
 	<nav>
-		<a href="index.html">Jacquelyn Marcella</a> 
-		<a href="about.html">About</a>
-		<a href="portfolio.html">Portfolio</a>
-		<a href="contact.html">Contact</a>
-		<a href="contact.html" class="grn-text"><i class="material-icons">file_download</i> Resume</a>
+		<div class="nav-wrapper">
+			<a href="index.html">Jacquelyn Marcella</a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href="about.html">About</a></li>
+				<li><a href="portfolio.html">Portfolio</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="contact.html" class="grn-text"><i class="material-icons">file_download</i> Resume</a></li>
+			</ul>
+		</div>
 	</nav>
 	<header>
 		<h4>Hi there, my name is</h4>
 		<h1>Jacquelyn.</h1>
 		<h4>I’m a Seattle-based front end developer.</h4>
+		<!-- Fix padding and centering in CSS -->
+		<br><br>
+		<center>
+			<i class="small material-icons orng-icon">arrow_downward</i>
+		</center>
 	</header>
 	<div class="section">
 		<a href="portfolio.html"><img src="img/plant-parenthood.jpg" class="portfolio-item"></a>
@@ -29,8 +38,8 @@
 		<hr>
 		<h3><a href="portfolio.html">Plant Parenthood</a></h3>
 		<p>Description here Description here Description here Description here Description here Description here Description here Description here Description here Description here Description here </p>
-		<p><a href="https://plant-parenthood.herokuapp.com/">Live Site</a> <a href="https://github.com/jacquelynmarcella/plantparenthood">View on GitHub</a></p>
-		<a href="portfolio.html" class="button">VIEW PORTFOLIO</a>	
+<!-- 		<p><a href="https://plant-parenthood.herokuapp.com/">Live Site</a> <a href="https://github.com/jacquelynmarcella/plantparenthood">View on GitHub</a></p> -->
+		<!-- <a href="portfolio.html" class="button">VIEW PORTFOLIO</a>	 -->
 	</div>
 	<br><br><br>
 	<!-- Clear fix the floats! -->
@@ -38,7 +47,7 @@
 		<a href="contact.html">jacquelyn.marcella@gmail.com</a>
 		<a href="https://github.com/jacquelynmarcella">GitHub</a>
 		<a href="https://www.linkedin.com/in/jmarcella/">LinkedIn</a>
-		<a href="contact.html"><i class="material-icons">file_download</i> Download Resume</a>
+		<a href="contact.html" class="grn-text"><i class="material-icons">file_download</i> Download Resume</a>
 		Put nav here as well
 	</footer>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
