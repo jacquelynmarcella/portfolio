@@ -20,24 +20,39 @@ header {
 
 nav {
 	background: #EFDAD6;
-	padding: 0 80px;
 	box-shadow: none;
+	padding: 0;
+	margin: 0;
 }
 
-nav a {
+.button-collapse, #nav-mobile li a {
+	font-family: 'Cabin', sans-serif !important;
 	font-weight: 700;
-	color: rgba(0, 0, 0, .9);
-	padding: 50px 10px 20px 10px;
+	padding: 0;
+	margin: 0 20px;
+	color: rgba(0, 0, 0, .9) !important;
 	background: none;
 	border: none;
+	transition: all 1s;
 }
 
-nav a:hover, nav a.grn-text:hover, footer a:hover {
-	color: #407257;
+.logo {
+	font-family: 'Shrikhand', cursive;
+	padding: 0;
+	margin: 0 20px;
+	color: rgba(0, 0, 0, .9);
+	font-size: 1.5em;
 }
 
 .material-icons {
 	display: inline-block !important;
+	line-height: .5em !important;
+	position: relative;
+	top: 5px;
+}
+
+#nav-mobile li a:hover, a.nav-link:hover, footer a:hover {
+	color: #407257 !important;
 }
 
 h1, h2, h3 {
@@ -91,7 +106,7 @@ a {
 	transition: all .75s;
 }
 
-.row{
+.row {
 	padding: 0 150px;
 }
 
@@ -117,11 +132,12 @@ a.button {
 	border: 2px solid #407257;
 }
 
-.orng-icon {
+.material-icons.orng-icon {
 	background: #C47A35;
 	color: white;
 	border-radius: 100px;
-	padding: 10px;
+	padding: 20px 12px;
+	line-height: 1em;
 }
 
 a.button:hover {
