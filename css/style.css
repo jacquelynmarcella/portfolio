@@ -23,17 +23,20 @@ body {
 }
 
 header {
-/*	background: linear-gradient(to bottom, #EFDAD6 20%, white);*/
 	box-sizing: border-box;
 	height: 100vh;
 	padding: 140px;
 	font-size: 2.5em;
+	background: var(--pink-color);
 	line-height: 2em;
-	background: linear-gradient(to top, var(--pink-color), white);
+/*	background: linear-gradient(to top, var(--pink-color), white);*/
 	transform: skewY(22deg);
   	transform-origin: top right;
 }
 
+#top:focus, #featured-projects:focus, #about:focus, #contact:focus {
+	outline: 0;
+}
 
 .header-name, .header-subhead {
 	transition: visibility 2s;
@@ -57,7 +60,6 @@ a:hover {
 }
 
 nav {
-	/*background: var(--pink-color);*/
 	height: 65px;
 	text-align: left;
 	color: white;
@@ -68,13 +70,13 @@ nav {
   	text-align: center;
   	z-index: 99;
   	font-size: 1em;
-  	transition: all 2s;
+  	transition: background 1s;
   	font-weight: 900;
 }
 
 .nav-scrolling {
-	transition: all 2s;
 	background: var(--pink-color);
+	font-size: .85em;
 }
 
 .nav-left, .nav-right {
@@ -99,10 +101,36 @@ nav {
 	color: var(--font-color);
 }
 
+.nav-right a:hover, .nav-left a:hover {
+	color: var(--green-color);
+}
+
+
+.nav-resume {
+	background: rgba(0, 0, 0, .8);
+	padding: 10px;
+}
+
+.nav-resume:hover {
+	background: var(--orange-color);
+	color: white;
+}
+
+a.nav-resume {
+	color: white;
+}
+
+a.nav-resume:hover{
+	color: white;
+}
+
+body > nav > div.nav-right > a.nav-resume.nav-desktop > svg > path {
+	color: white;
+}
+
 .nav-logo {
 	font-family: var(--header-font);
-	font-size: 1.25em;
-	color: var(--green-color);
+	font-size: 1.55em;
 	letter-spacing: .75px;
 }
 
@@ -118,20 +146,13 @@ nav {
 	width: 50%;
 	font-size: 1em;
 	background: rgba(256, 256, 256, .8);
+	box-shadow: 3px 3px 1px rgba(0, 0, 0, .3);
 }
 
 .nav-responsive a {
 	display: block;
 	padding: 30px;
 }
-
-.nav-responsive a:hover {
-	background: black;
-}
-
-/*.nav-hamburger:hover, .nav-responsive a:hover {
-	border-bottom: 1px solid var(--green-color);
-}*/
 
 h1, h2 {
 	font-family: var(--header-font);
@@ -271,13 +292,28 @@ a.button {
 	border: 2px solid #407257;
 }
 
-.orng-icon {
-	background: #C47A35;
-	color: white;
-	border-radius: 100px;
-	line-height: 1em;
-	font-size: .75em;
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0em, .40em);
+    }
+}
+
+
+.green-icon {
+	text-align: center;
 	padding: 20px;
+	display: block;
+	background: none;
+	animation: floating 1s infinite alternate;
+}
+
+
+body > header > div > a > p > svg > path {
+	color: var(--green-color);
 }
 
 a.button:hover {
@@ -342,11 +378,19 @@ em {
 @media all and (max-width: 780px){
 	header {
 		padding: 20px;
-		font-size: 1.5em;
+		font-size: 2.25em;
+	}
+
+	.green-icon {
+		font-size: 2em;
+	}
+
+	.header-content {
+		margin-top: 210px;
 	}
 
 	header h1 {
-		line-height: 2em;
+		padding: 20px 0;
 	}
 	div.section {
 		padding: 10px;
@@ -370,9 +414,6 @@ em {
 
 	.portfolio-item.blackjack {
 		order: 3;
-	}
-	.about-item.bottom {
-		align-self: flex-start;
 	}
 
 }

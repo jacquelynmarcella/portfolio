@@ -15,24 +15,8 @@ $(function() {
 
 });
 
-// Responsive Navbar
-$(".nav-hamburger").click(function(event){
-  event.preventDefault();
-  $(".nav-responsive").toggle("blind", 500);
-});
 
-// The below 2 functions hide the dropdown if it is expanded when the screen is small, but then the user makes their screen large 
-$(window).resize(function(){
-    checkSize();
-});
-
-function checkSize(){
-    if ($(".nav-hamburger").css("display") == "none" ){
-        $(".nav-responsive").hide();
-    }
-}
-
-
+// Removes animated classes after the animation is complete
   $.fn.extend({
     animateCss: function(animationName, callback) {
       var animationEnd = (function(el) {
@@ -59,3 +43,50 @@ function checkSize(){
       return this;
     }
   })
+
+// Responsive Navbar
+$(".nav-hamburger").click(function(event){
+  event.preventDefault();
+  $(".nav-responsive").toggle("blind", 500);
+});
+
+$(window).resize(function(){
+    checkSize();
+});
+
+function checkSize(){
+    if ($(".nav-hamburger").css("display") == "none" ){
+        $(".nav-responsive").hide();
+    }
+}
+
+
+// Smooth scrolling
+  $('a[href*="#"]')
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { 
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); 
+            $target.focus(); 
+          };
+        });
+      }
+    }
+  });
