@@ -406,7 +406,7 @@ em {
 		padding: 20px 0;
 	}
 	div.section {
-		padding: 10px;
+		padding: 40px 10px;
 	}	
 	.portfolio-item.plant, .portfolio-item.dream, .portfolio-item.blackjack  {
 		flex-grow: 1;
