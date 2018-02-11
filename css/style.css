@@ -4,7 +4,7 @@
   --green-color: #407257;
   --orange-color: #C47A35;
   --header-font: 'Shrikhand', cursive;
-  --body-font: 'Cabin', sans-serif;
+  --body-font: 'Raleway', sans-serif;
 }
 
 * {
@@ -34,12 +34,12 @@ header {
   	transform-origin: top right;
 }
 
-#top:focus, #featured-projects:focus, #about:focus, #contact:focus {
-	outline: 0;
+header h4 {
+	font-weight: 500;
 }
 
-.header-name, .header-subhead {
-	transition: visibility 2s;
+#top:focus, #featured-projects:focus, #about:focus, #contact:focus {
+	outline: 0;
 }
 
 .header-content {
@@ -145,11 +145,12 @@ body > nav > div.nav-right > a.nav-resume.nav-desktop > svg > path {
 	right: 0;
 	width: 50%;
 	font-size: 1em;
-	background: rgba(256, 256, 256, .8);
+	background: rgba(256, 256, 256, .95);
 	box-shadow: 3px 3px 1px rgba(0, 0, 0, .3);
 }
 
 .nav-responsive a {
+	color: var(--font-color);
 	display: block;
 	padding: 30px;
 }
@@ -168,21 +169,6 @@ h2 {
 h3 {
 	font-size: 2.5em;
 	line-height: 1.25em;
-}
-
-.portfolio-item h4 {
-	font-size: 1.5em;
-	line-height: .7em;
-	padding: 0 10px 5px 10px;
-	font-family: var(--header-font);
-	font-weight: 900;
-	letter-spacing: 1px;
-}
-
-.portfolio-item h4, p {
-	background: rgba(256, 256, 256, .7);
-	margin: 5px;
-	display: inline-block;
 }
 
 .grn-text {
@@ -207,43 +193,63 @@ h5 {
 	flex-wrap: nowrap;
 }
 
-.portfolio-item.plant, .portfolio-item.dream  {
-  flex-grow: 2;
-  min-width: 350px;
+.portfolio-item.dream  {
+  flex-grow: 3;
+  min-width: 300px;
+  background: url('../img/home_background.jpg') no-repeat;
+  transition: all 2s;
+  background-size: 150%;
+  background-position: 50% 50%;
 }
 
 .portfolio-item.plant  {
-  flex-grow: 4;
-  min-width: 500px;
-}
-
-.portfolio-item.plant {
-	order: 1;
-}
-
-.portfolio-item.dream {
-	order: 2;
+  flex-grow: 6;
+  width: 100%;
+  background: url('../img/hero-1.jpg') no-repeat;
+  transition: all 2s;
+  background-size: 150%;
+  background-position: 50% 50%;
 }
 
 .portfolio-item.blackjack {
-	flex-grow: 1;
-	min-width: 200px;
-	order: 3;
+	flex-grow: 2;
+	min-width: 100px;
+	background: url('../img/492231080.jpg') no-repeat;
+  	transition: all 2s;
+  	background-size: 150%;
+  	background-position: 50% 50%;
+}
+
+.portfolio-item h3 {
+	letter-spacing: 1px;
+	line-height: 250px;
+}
+
+.portfolio-item.plant h3 {
+	color: #E3CB43;
+	text-transform: uppercase;
+}
+
+.portfolio-item.dream h3 {
+	color: rgba(68, 73, 82, .9);
+}
+
+.portfolio-item.blackjack h3 {
+	color: white;
 }
 
 .portfolio-item {
-	background: url('../img/plant-parenthood.jpg');
-	background-size: 150%;
-	padding: 60px 40px;
-	background-position: 50% 50%;
+	text-align: center;
+	height: 250px;
 	transition: all 2s;
 	margin: 10px;
+	box-sizing: border-box;
 }
 
 .portfolio-item:hover {
+	background-position: 50% 50%;
 	background-size: 200%;
-	/*background: url('../img/plant-parenthood.png');
-	background-position: 50% 50%;*/
+	cursor: pointer;
 }
 
 .about-item {
@@ -255,6 +261,11 @@ h5 {
 
 .about-item.center {
 	align-self: center;
+}
+
+.about-item h5 {
+	font-weight: 700;
+	margin: 20px auto;
 }
 
 .about-item.bottom {
@@ -293,6 +304,7 @@ a.button {
 }
 
 
+
 @keyframes floating {
   0% {
     transform: translate(0, 0);
@@ -302,13 +314,12 @@ a.button {
     }
 }
 
-
 .green-icon {
 	text-align: center;
 	padding: 20px;
 	display: block;
 	background: none;
-	animation: floating 1s infinite alternate;
+	animation: floating 1s infinite alternate ease-in;
 }
 
 
@@ -323,18 +334,16 @@ a.button:hover {
 
 footer {
 	display: inline-block;
-	background: linear-gradient(to bottom right, var(--pink-color), white);
-	padding: 40px;
-	/*	position: absolute;
-	right: 0;*/
-		/*overflow: hidden;*/
+	background: var(--pink-color);
+	padding: 40px 200px;
   	box-sizing: border-box;
 
 }
 
-.hidden {
-	visibility: hidden;
-	transition: all 2s;
+footer p {
+	display: inline-block;
+	margin: 0 20px;
+	font-size: 1em;
 }
 
 .contact a {
@@ -370,6 +379,10 @@ em {
 	.nav-desktop {
 		display: none;
 	}
+
+	header {
+		padding: 50px;
+	}
 	.nav-hamburger {
 		display: inline-block;
 	}
@@ -378,7 +391,7 @@ em {
 @media all and (max-width: 780px){
 	header {
 		padding: 20px;
-		font-size: 2.25em;
+		font-size: 1.5em;
 	}
 
 	.green-icon {
@@ -398,22 +411,20 @@ em {
 	.portfolio-item.plant, .portfolio-item.dream, .portfolio-item.blackjack  {
 		flex-grow: 1;
 		max-width: 90%;
-		width: 100%;
-		padding: 50px 20px;
-		font-size: .5em;
 		min-width: 200px;
+		font-size: .5em;
 	}
 
-	.portfolio-item.plant {
-		order: 1;
+	.portfolio-item {
+		height: 150px;
 	}
 
-	.portfolio-item.dream {
-		order: 2;
+	footer {
+		padding: 10px;
 	}
 
-	.portfolio-item.blackjack {
-		order: 3;
+	.portfolio-item h3 {
+		line-height: 150px;
 	}
 
 }

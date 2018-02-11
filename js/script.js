@@ -1,7 +1,6 @@
 
 $(function() {
     $('body').addClass('animated fadeIn');
-    $('.header-name').animateCss('fadeInLeft');
 
     $(window).scroll(function() {
       var height = $(window).scrollTop();
@@ -15,6 +14,12 @@ $(function() {
 
 });
 
+
+// Helps make full div clickable
+$(".portfolio-item").click(function() {
+  window.location = $(this).find("a").attr("href"); 
+  return false;
+});
 
 // Removes animated classes after the animation is complete
   $.fn.extend({
