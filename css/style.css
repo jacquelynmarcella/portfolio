@@ -1,8 +1,10 @@
 :root {
-  --font-color: rgba(0, 0, 0, .9);
+  --font-color: rgba(0, 0, 0, .8);
   --pink-color: #EFDAD6;
   --green-color: #407257;
   --orange-color: #C47A35;
+  --header-font: 'Shrikhand', cursive;
+  --body-font: 'Cabin', sans-serif;
 }
 
 * {
@@ -13,7 +15,7 @@
 
 
 body {
-	font-family: 'Cabin', sans-serif;
+	font-family: var(--body-font);
 	font-weight: 400;
 	color: 
 	margin: 0;
@@ -24,7 +26,7 @@ header {
 /*	background: linear-gradient(to bottom, #EFDAD6 20%, white);*/
 	box-sizing: border-box;
 	height: 100vh;
-	padding: 200px;
+	padding: 140px;
 	font-size: 2.5em;
 	line-height: 2em;
 	background: linear-gradient(to top, var(--pink-color), white);
@@ -32,12 +34,15 @@ header {
   	transform-origin: top right;
 }
 
-header h1, header h4 {
-	transform: skewY(-22deg);
+
+.header-name, .header-subhead {
+	transition: visibility 2s;
 }
 
 .header-content {
 	margin-top: 250px;
+	transform: skewY(-22deg);
+	padding: 20px;
 }
 
 a {
@@ -63,8 +68,13 @@ nav {
   	text-align: center;
   	z-index: 99;
   	font-size: 1em;
-  	transition: content 2s;
+  	transition: all 2s;
   	font-weight: 900;
+}
+
+.nav-scrolling {
+	transition: all 2s;
+	background: var(--pink-color);
 }
 
 .nav-left, .nav-right {
@@ -90,14 +100,41 @@ nav {
 }
 
 .nav-logo {
-	font-family: 'Shrikhand', cursive;
+	font-family: var(--header-font);
 	font-size: 1.25em;
 	color: var(--green-color);
 	letter-spacing: .75px;
 }
 
+.nav-hamburger {
+	display: none;
+}
+
+.nav-responsive {
+	display: none;
+	position: absolute;
+	top: 65px;
+	right: 0;
+	width: 50%;
+	font-size: 1em;
+	background: rgba(256, 256, 256, .8);
+}
+
+.nav-responsive a {
+	display: block;
+	padding: 30px;
+}
+
+.nav-responsive a:hover {
+	background: black;
+}
+
+/*.nav-hamburger:hover, .nav-responsive a:hover {
+	border-bottom: 1px solid var(--green-color);
+}*/
+
 h1, h2 {
-	font-family: 'Shrikhand', cursive;
+	font-family: var(--header-font);
 	font-weight: 900;
 	letter-spacing: 1px;
 }
@@ -112,6 +149,21 @@ h3 {
 	line-height: 1.25em;
 }
 
+.portfolio-item h4 {
+	font-size: 1.5em;
+	line-height: .7em;
+	padding: 0 10px 5px 10px;
+	font-family: var(--header-font);
+	font-weight: 900;
+	letter-spacing: 1px;
+}
+
+.portfolio-item h4, p {
+	background: rgba(256, 256, 256, .7);
+	margin: 5px;
+	display: inline-block;
+}
+
 .grn-text {
 	color: #407257;
 }
@@ -119,7 +171,7 @@ h3 {
 h5 {
 	font-size: 1em;
 	font-weight: 700;
-	text-transform: uppercase;
+	font: var(--header-font);
 }
 
 .flex-grid {
@@ -200,7 +252,7 @@ hr {
 div.section {
 	margin: 0 auto;
 	min-height: 100vh;
-	padding: 120px 80px;
+	padding: 120px 100px;
 	box-sizing: border-box;
 }
 
@@ -226,7 +278,6 @@ a.button {
 	line-height: 1em;
 	font-size: .75em;
 	padding: 20px;
-	transform: skewY(22deg);
 }
 
 a.button:hover {
@@ -236,13 +287,21 @@ a.button:hover {
 
 footer {
 	display: inline-block;
-	background: #EFDAD6;
+	background: linear-gradient(to bottom right, var(--pink-color), white);
 	padding: 40px;
-	position: absolute;
-	right: 0;
+	/*	position: absolute;
+	right: 0;*/
+		/*overflow: hidden;*/
+  	box-sizing: border-box;
+
 }
 
-footer a {
+.hidden {
+	visibility: hidden;
+	transition: all 2s;
+}
+
+.contact a {
 	font-weight: 700;
 	color: rgba(0,0,0,.9);
 	letter-spacing: .75px;
@@ -261,22 +320,33 @@ em {
 	border-radius: 250px;
 }
 
-@media all and (max-width: 920px){
+@media all and (max-width: 1150px){
 	header {
-		padding: 50px 20px;
+		padding: 70px 40px;
 	}
-/*	div.section {
-		padding: 20px;
-	}*/
+
+}
+
+@media all and (max-width: 920px){
 	.flex-grid.nowrap {
 		flex-wrap: wrap;
+	}
+	.nav-desktop {
+		display: none;
+	}
+	.nav-hamburger {
+		display: inline-block;
 	}
 }
 
 @media all and (max-width: 780px){
 	header {
-		padding: 100px 10px;
-		font-size: 1em;
+		padding: 20px;
+		font-size: 1.5em;
+	}
+
+	header h1 {
+		line-height: 2em;
 	}
 	div.section {
 		padding: 10px;
@@ -300,6 +370,9 @@ em {
 
 	.portfolio-item.blackjack {
 		order: 3;
+	}
+	.about-item.bottom {
+		align-self: flex-start;
 	}
 
 }
