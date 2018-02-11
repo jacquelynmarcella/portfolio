@@ -55,6 +55,10 @@ $(".nav-hamburger").click(function(event){
   $(".nav-responsive").toggle("blind", 500);
 });
 
+$(".nav-responsive a").click(function() {
+  $(".nav-responsive").toggle();
+});
+
 $(window).resize(function(){
     checkSize();
 });

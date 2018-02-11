@@ -42,6 +42,17 @@ header h4 {
 	outline: 0;
 }
 
+.portfolio-images {
+	margin: 20px auto;
+	text-align: center;
+}
+
+.portfolio-images img {
+	height: 300px;
+	max-width: 100%;
+	margin: 10px;
+}
+
 .header-content {
 	margin-top: 250px;
 	transform: skewY(-22deg);
@@ -62,7 +73,6 @@ a:hover {
 nav {
 	height: 65px;
 	text-align: left;
-	color: white;
 	position: fixed;
   	top: 0;
   	width: 100%;
@@ -72,6 +82,10 @@ nav {
   	font-size: 1em;
   	transition: background 1s;
   	font-weight: 900;
+}
+
+.nav-subpage {
+	background: var(--pink-color);
 }
 
 .nav-scrolling {
@@ -171,6 +185,7 @@ h3 {
 	line-height: 1.25em;
 }
 
+
 .grn-text {
 	color: #407257;
 }
@@ -238,6 +253,12 @@ h5 {
 	color: white;
 }
 
+.portfolio h1 {
+	font-size: 3em;
+	line-height: 1em;
+	margin: .25em auto;
+}
+
 .portfolio-item {
 	text-align: center;
 	height: 250px;
@@ -284,7 +305,8 @@ hr {
 div.section {
 	margin: 0 auto;
 	min-height: 100vh;
-	padding: 120px 100px;
+	padding: 120px 0;
+	width: 70%;
 	box-sizing: border-box;
 }
 
@@ -294,8 +316,13 @@ div.section {
 }
 
 
+.button {
+	margin: 0 auto;
+	margin-right: 0;
+	align-self: center;
+}
 
-a.button {
+.button a {
 	font-weight: 700;
 	color: #407257;
 	text-decoration: none;
@@ -303,6 +330,10 @@ a.button {
 	border: 2px solid #407257;
 }
 
+.button a:hover {
+	color: white;
+	background: #407257;
+}
 
 
 @keyframes floating {
@@ -327,10 +358,7 @@ body > header > div > a > p > svg > path {
 	color: var(--green-color);
 }
 
-a.button:hover {
-	color: white;
-	background: #407257;
-}
+
 
 footer {
 	display: inline-block;
@@ -394,20 +422,29 @@ em {
 		font-size: 1.5em;
 	}
 
+	h1, h2 {
+		letter-spacing: 0px;
+	}
+
 	.green-icon {
 		font-size: 2em;
 	}
 
 	.header-content {
-		margin-top: 210px;
+		margin-top: 180px;
 	}
 
 	header h1 {
 		padding: 20px 0;
 	}
 	div.section {
-		padding: 40px 10px;
-	}	
+		padding: 20px;
+		margin: 60px auto;
+		width: 100%;
+	}
+	div.section.portfolio {
+		margin-top: 100px;
+	}
 	.portfolio-item.plant, .portfolio-item.dream, .portfolio-item.blackjack  {
 		flex-grow: 1;
 		max-width: 90%;
@@ -416,7 +453,7 @@ em {
 	}
 
 	.portfolio-item {
-		height: 150px;
+		height: 200px;
 	}
 
 	footer {
@@ -424,7 +461,18 @@ em {
 	}
 
 	.portfolio-item h3 {
-		line-height: 150px;
+		line-height: 200px;
 	}
+
+	.button {
+		margin-right: auto;
+		padding: 20px;
+	}
+
+	.portfolio-images img {
+		height: auto;
+		max-width: 95%;
+	}
+
 
 }
