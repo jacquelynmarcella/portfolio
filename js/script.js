@@ -1,19 +1,19 @@
-
 $(function() {
+  // On pageload animations
     $('body').addClass('animated fadeIn');
-
-    $(window).scroll(function() {
-      var height = $(window).scrollTop();
-      if(height  > 300) {
-        $('nav').addClass('nav-scrolling');
-      }
-      else {
-        $('nav').removeClass('nav-scrolling');
-      }
-     });
-
 });
 
+
+// Navbar adjusts when you scroll
+$(window).scroll(function() {
+  var height = $(window).scrollTop();
+  if(height  > 300) {
+    $('nav').addClass('nav-scrolling');
+  }
+  else {
+    $('nav').removeClass('nav-scrolling');
+  }
+});
 
 // Helps make full div clickable
 $(".portfolio-item").click(function() {
@@ -21,38 +21,14 @@ $(".portfolio-item").click(function() {
   return false;
 });
 
-// Removes animated classes after the animation is complete
-  $.fn.extend({
-    animateCss: function(animationName, callback) {
-      var animationEnd = (function(el) {
-        var animations = {
-          animation: 'animationend',
-          OAnimation: 'oAnimationEnd',
-          MozAnimation: 'mozAnimationEnd',
-          WebkitAnimation: 'webkitAnimationEnd',
-        };
-
-        for (var t in animations) {
-          if (el.style[t] !== undefined) {
-            return animations[t];
-          }
-        }
-      })(document.createElement('div'));
-
-      this.addClass('animated ' + animationName).one(animationEnd, function() {
-        $(this).removeClass('animated ' + animationName);
-
-        if (typeof callback === 'function') callback();
-      });
-
-      return this;
-    }
-  })
-
 // Responsive Navbar
 $(".nav-hamburger").click(function(event){
   event.preventDefault();
   $(".nav-responsive").toggle("blind", 500);
+});
+
+$(".nav-responsive a").click(function() {
+  $(".nav-responsive").toggle();
 });
 
 $(window).resize(function(){
@@ -65,33 +41,18 @@ function checkSize(){
     }
 }
 
-
 // Smooth scrolling
-  $('a[href*="#"]')
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { 
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+        || location.hostname == this.hostname) {
+
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+           if (target.length) {
+             $('html,body').animate({
+                 scrollTop: target.offset().top - 65
+            }, 1000);
             return false;
-          } else {
-            $target.attr('tabindex','-1'); 
-            $target.focus(); 
-          };
-        });
-      }
+        }
     }
-  });
+});

@@ -29,7 +29,6 @@ header {
 	font-size: 2.5em;
 	background: var(--pink-color);
 	line-height: 2em;
-/*	background: linear-gradient(to top, var(--pink-color), white);*/
 	transform: skewY(22deg);
   	transform-origin: top right;
 }
@@ -38,8 +37,23 @@ header h4 {
 	font-weight: 500;
 }
 
+p {
+	line-height: 2em;
+}
+
 #top:focus, #featured-projects:focus, #about:focus, #contact:focus {
 	outline: 0;
+}
+
+.portfolio-images {
+	margin: 20px auto;
+	text-align: center;
+}
+
+.portfolio-images img {
+	height: 320px;
+	max-width: 100%;
+	margin: 5px;
 }
 
 .header-content {
@@ -50,9 +64,9 @@ header h4 {
 
 a {
 	text-decoration: none;
-	transition: all .5s;
+	transition: all 1s;
 	color: var(--green-color);
-
+	font-weight: 900;
 }
 
 a:hover {
@@ -62,7 +76,6 @@ a:hover {
 nav {
 	height: 65px;
 	text-align: left;
-	color: white;
 	position: fixed;
   	top: 0;
   	width: 100%;
@@ -72,6 +85,10 @@ nav {
   	font-size: 1em;
   	transition: background 1s;
   	font-weight: 900;
+}
+
+.nav-subpage {
+	background: var(--pink-color);
 }
 
 .nav-scrolling {
@@ -171,6 +188,7 @@ h3 {
 	line-height: 1.25em;
 }
 
+
 .grn-text {
 	color: #407257;
 }
@@ -179,6 +197,11 @@ h5 {
 	font-size: 1em;
 	font-weight: 700;
 	font: var(--header-font);
+}
+
+.back-next-buttons {
+	text-align: center;
+	padding: 20px;
 }
 
 .flex-grid {
@@ -198,7 +221,7 @@ h5 {
   min-width: 300px;
   background: url('../img/home_background.jpg') no-repeat;
   transition: all 2s;
-  background-size: 150%;
+  background-size: 180%;
   background-position: 50% 50%;
 }
 
@@ -207,7 +230,7 @@ h5 {
   width: 100%;
   background: url('../img/hero-1.jpg') no-repeat;
   transition: all 2s;
-  background-size: 150%;
+  background-size: 180%;
   background-position: 50% 50%;
 }
 
@@ -216,7 +239,7 @@ h5 {
 	min-width: 100px;
 	background: url('../img/492231080.jpg') no-repeat;
   	transition: all 2s;
-  	background-size: 150%;
+  	background-size: 180%;
   	background-position: 50% 50%;
 }
 
@@ -236,6 +259,12 @@ h5 {
 
 .portfolio-item.blackjack h3 {
 	color: white;
+}
+
+.portfolio h1 {
+	font-size: 3em;
+	line-height: 1em;
+	margin: .25em auto;
 }
 
 .portfolio-item {
@@ -259,10 +288,6 @@ h5 {
 	align-self: top;
 }
 
-.about-item.center {
-	align-self: center;
-}
-
 .about-item h5 {
 	font-weight: 700;
 	margin: 20px auto;
@@ -284,25 +309,43 @@ hr {
 div.section {
 	margin: 0 auto;
 	min-height: 100vh;
-	padding: 120px 100px;
+	padding: 50px 0;
+	width: 70%;
 	box-sizing: border-box;
 }
 
-
-.row {
-	padding: 0 150px;
+div.section.portfolio {
+	margin-top: 80px;
 }
 
+.button {
+	margin: 0 auto;
+	margin-right: 0;
+	align-self: center;
+}
 
-
-a.button {
+.button a, .back-next-buttons a {
 	font-weight: 700;
 	color: #407257;
 	text-decoration: none;
 	padding: 8px;
 	border: 2px solid #407257;
+	transition: all 1s;
 }
 
+.back-next-buttons > a > svg > path {
+	color: var(--green-color);
+	transition: all 1s;
+}
+
+.back-next-buttons > a:hover > svg > path {
+	color: white;
+}
+
+.button a:hover, .back-next-buttons a:hover {
+	color: white;
+	background: #407257;
+}
 
 
 @keyframes floating {
@@ -327,23 +370,48 @@ body > header > div > a > p > svg > path {
 	color: var(--green-color);
 }
 
-a.button:hover {
-	color: white;
-	background: #407257;
-}
 
 footer {
+	position: absolute;
+	right: 0;
 	display: inline-block;
-	background: var(--pink-color);
-	padding: 40px 200px;
+	width: 100%;
   	box-sizing: border-box;
+  	margin: 0;
+  	padding: 40px;
+  	background: var(--pink-color);
+}
 
+footer h4 {
+	font-family: var(--header-font);
+	margin-bottom: .75em;
+	font-size: 2em;
 }
 
 footer p {
+	line-height: 3em;
 	display: inline-block;
-	margin: 0 20px;
+	margin-right: 10px;
+}
+
+footer a span, footer a > svg > path {
+	transition: all 1s;
+}
+
+footer a:hover > svg > path, footer a:hover > span {
+	color: var(--green-color);
+}
+
+.footer-content {
+	margin: 0 auto;
+	display: inline-block;
 	font-size: 1em;
+/*	text-align: right;*/
+}
+
+.icon-label {
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 .contact a {
@@ -360,7 +428,7 @@ em {
 .headshot {
 	height: 20em;
 	width: 20em;
-	opacity: .7;
+	opacity: .9;
 	margin: 0 20px 0 0;
 	border-radius: 250px;
 }
@@ -394,20 +462,35 @@ em {
 		font-size: 1.5em;
 	}
 
+	h1, h2 {
+		letter-spacing: .75px;
+	}
+
 	.green-icon {
 		font-size: 2em;
 	}
 
 	.header-content {
-		margin-top: 210px;
+		margin-top: 180px;
 	}
 
 	header h1 {
 		padding: 20px 0;
 	}
 	div.section {
+		padding: 20px;
+		margin: 60px auto;
+		width: 100%;
+	}
+	div.section.portfolio {
+		margin-top: 100px;
+	}
+	footer p {
+		display: block;
+	}
+	.footer-content {
 		padding: 40px 10px;
-	}	
+	}
 	.portfolio-item.plant, .portfolio-item.dream, .portfolio-item.blackjack  {
 		flex-grow: 1;
 		max-width: 90%;
@@ -416,15 +499,22 @@ em {
 	}
 
 	.portfolio-item {
-		height: 150px;
-	}
-
-	footer {
-		padding: 10px;
+		height: 200px;
 	}
 
 	.portfolio-item h3 {
-		line-height: 150px;
+		line-height: 200px;
 	}
+
+	.button {
+		margin-right: auto;
+		padding: 20px;
+	}
+
+	.portfolio-images img {
+		height: auto;
+		max-width: 95%;
+	}
+
 
 }
