@@ -1,9 +1,3 @@
-$(function() {
-  // On pageload animations
-    $('body').addClass('animated fadeIn');
-});
-
-
 // Navbar adjusts when you scroll
 $(window).scroll(function() {
   var height = $(window).scrollTop();
