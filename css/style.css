@@ -1,6 +1,6 @@
 /* Universal styles */
 :root {
-  --font-color: rgba(0, 0, 0, .8);
+  --font-color: rgba(0, 0, 0, .82);
   --pink-color: #EFDAD6;
   --green-color: #407257;
   --orange-color: #C47A35;
@@ -39,7 +39,6 @@ a:hover {
 h1, h2 {
 	font-family: var(--header-font);
 	font-weight: 900;
-	letter-spacing: 1px;
 }
 
 h2 {
@@ -195,22 +194,37 @@ body > nav > div.nav-right > a.nav-resume.nav-desktop > svg > path {
 
 /* Header */
 
-header {
+.header-background {
 	box-sizing: border-box;
 	height: 100vh;
+	width: 100%;
 	padding: 200px 140px;
 	font-size: 2.25em;
 	background: var(--pink-color);
 	line-height: 2em;
-	transform: skewY(22deg);
+	transform: skewY(25deg);
   	transform-origin: top right;
   	transition: all 2s;
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	z-index: -1;
+}
+
+header {
+	margin-top: 64px;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	font-size: 2.5em;
 }
 
 .header-content {
-	margin-top: 250px;
-	transform: skewY(-22deg);
-	padding: 20px;
+	display: inline-block;
+	margin: 0 auto;
+	transition: all .5s;
 }
 
 header h1 {
@@ -224,6 +238,7 @@ header h4 {
 	margin: 0 auto;
 	line-height: 1.5em;
 	font-weight: 500;
+	white-space: nowrap;
 }
 
 @keyframes floating {
@@ -236,6 +251,7 @@ header h4 {
 }
 
 .green-icon {
+	font-size: 1.5em;
 	text-align: center;
 	padding: 20px;
 	display: block;
@@ -302,12 +318,6 @@ footer a:hover > svg > path, footer a:hover > span {
 	box-sizing: border-box;
 }
 
-.portfolio-item:hover {
-	background-position: 50% 50%;
-	background-size: 200%;
-	cursor: pointer;
-}
-
 .portfolio h1 {
 	font-size: 3em;
 	line-height: 1em;
@@ -359,6 +369,11 @@ footer a:hover > svg > path, footer a:hover > span {
 	color: white;
 }
 
+.portfolio-item:hover {
+	background-position: 50% 50%;
+	background-size: 200%;
+	cursor: pointer;
+}
 
 /* Buttons */
 
@@ -451,10 +466,10 @@ div.section.portfolio {
 /* Responsive */
 
 @media all and (max-width: 1150px){
-	header {
+/*	header {
 		padding: 200px 40px;
 	}
-
+*/
 	.about-item.skills {
 		margin: 0;
 		font-size: .9em;
@@ -465,7 +480,7 @@ div.section.portfolio {
 	}
 }
 
-@media all and (max-width: 920px){
+@media all and (max-width: 900px){
 	.flex-grid.nowrap {
 		flex-wrap: wrap;
 	}
@@ -474,12 +489,17 @@ div.section.portfolio {
 		display: none;
 	}
 
-	header {
-		padding: 100px 50px;
+	.header-background {
+		transform: skewY(35deg);
 	}
 
-	header h1 {
-		font-size: 1.75em;
+	.header-content {
+		overflow: visible;
+		width: 65%;
+		margin: 0 auto;
+		font-size: 1em;
+		line-height: 2em;
+		letter-spacing: 0px;
 	}
 
 	.nav-hamburger {
@@ -487,11 +507,19 @@ div.section.portfolio {
 	}
 }
 
+@media all and (max-width: 650px){
+	.header-content {
+		width: 80%;
+	}
+}
 
 @media all and (max-width: 835px){
-	header {
+/*	header {
 		padding: 50px 20px;
 		font-size: 2em;
+	}*/
+	.portfolio-item.plant, .portfolio-item.dream, .portfolio-item.blackjack  {
+		font-size: .6em;
 	}
 }
 
@@ -500,14 +528,14 @@ div.section.portfolio {
 		letter-spacing: .75px;
 	}
 
-	header {
+/*	header {
 		font-size: 1.5em;
 	}
 
 	.header-content {
 		margin-top: 200px;
 	}
-
+*/
 	.green-icon {
 		font-size: 2em;
 	}
@@ -536,9 +564,9 @@ div.section.portfolio {
 
 	.portfolio-item.plant, .portfolio-item.dream, .portfolio-item.blackjack  {
 		flex-grow: 1;
-		max-width: 90%;
+		max-width: 100%;
 		min-width: 200px;
-		font-size: .5em;
+/*		font-size: .5em;*/
 	}
 
 	.portfolio-item {
@@ -556,14 +584,16 @@ div.section.portfolio {
 
 }
 
-@media all and (max-width: 450px){
-	header {
-		padding: 20px;
-		font-size: 1.5em;
+@media all and (max-width: 500px){
+	.header-background {
+		transform: skewY(58deg);
 	}
 
 	.header-content {
-		margin-top: 210px;
+		width: 100%;
+		padding: 50px;
+		font-size: .6em;
+		line-height: 2em;
 	}
 
 	.back-next-buttons a {
