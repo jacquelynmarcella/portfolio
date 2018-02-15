@@ -76,7 +76,7 @@ div.section {
 	margin: 0 auto;
 	min-height: 100vh;
 	padding: 50px 0 80px 0;
-	max-width: 750px;
+	max-width: 850px;
 	box-sizing: border-box;
 	transition: all 2s;
 }
@@ -239,7 +239,7 @@ body > nav > div.nav-right > a.nav-resume.nav-desktop > svg > path {
 	font-size: 2.25em;
 	background: var(--pink-color);
 	line-height: 2em;
-	transform: skewY(25deg);
+	transform: skewY(26.5deg);
   	transform-origin: top right;
   	transition: all 1.5s;
   	position: absolute;
@@ -250,7 +250,7 @@ body > nav > div.nav-right > a.nav-resume.nav-desktop > svg > path {
 
 header {
 	margin-top: 64px;
-	height: 100vh;
+	height: 95vh;
 	width: 100%;
 	display: flex;
   	justify-content: center;
@@ -269,6 +269,7 @@ header h1 {
 	display: inline-block;
 	margin: 0 auto;
 	padding: 20px 0;
+	line-height: 1em;
 }
 
 header h4 {
@@ -503,22 +504,19 @@ div.section.portfolio {
 
 /* Responsive */
 
+/* Large monitors */
 @media all and (min-width: 1400px){
 	.header-content {
 		font-size: 3.25em;
 		line-height: 1.75em;
 	}
+	div.section {
+		max-width: 1000px;
+	}
+
 }
 
 @media all and (max-width: 1150px){
-	.header-content {
-		overflow: visible;
-		width: 65%;
-		margin: 0 auto;
-		font-size: 1em;
-		line-height: 2em;
-		letter-spacing: 0px;
-	}
 
 	.about-item.skills {
 		margin: 0;
@@ -529,6 +527,7 @@ div.section.portfolio {
 		margin: 20px auto;
 	}
 }
+
 
 @media all and (max-width: 900px){
 	.flex-grid.nowrap {
@@ -548,26 +547,21 @@ div.section.portfolio {
 	}
 }
 
-@media all and (max-width: 650px){
-	.header-content {
-		width: 80%;
-	}
-}
-
 @media all and (max-width: 835px){
 	.portfolio-item.plant, .portfolio-item.dream, .portfolio-item.blackjack  {
 		font-size: .6em;
 	}
 }
 
+/* Mid sized */
 @media all and (max-width: 780px){
 	h1, h2 {
 		letter-spacing: .75px;
 	}
 
-	.green-icon {
+/*	.green-icon {
 		font-size: 2em;
-	}
+	}*/
 
 	div.section {
 		padding: 20px;
@@ -612,9 +606,10 @@ div.section.portfolio {
 
 }
 
+/* Mobile */
 @media all and (max-width: 500px){
 	h1, h2 {
-		letter-spacing: 0px;
+		letter-spacing: -.5px;
 	}
 	/* Need to test the spacing more */
 	.header-background {
@@ -625,7 +620,7 @@ div.section.portfolio {
 		width: 100%;
 		padding: 50px;
 		font-size: .6em;
-		line-height: 2em;
+		line-height: 1em;
 	}
 
 	.back-next-buttons a {
