@@ -108,11 +108,15 @@ nav {
 }
 
 .nav-subpage {
-	background: var(--pink-color);
+	background: var(--green-color);
+}
+
+.nav-subpage .nav-left a, .nav-subpage .nav-right a {
+	color: white;
 }
 
 .nav-scrolling {
-	background: var(--pink-color);
+	background: var(--green-color);
 	font-size: .85em;
 }
 
@@ -138,8 +142,16 @@ nav {
 	color: var(--font-color);
 }
 
+.nav-scrolling .nav-right a, .nav-scrolling .nav-right a, .nav-scrolling .nav-logo {
+	color: white;
+}
+
 .nav-right a:hover, .nav-left a:hover {
 	color: var(--green-color);
+}
+
+.nav-scrolling .nav-right a:hover, .nav-scrolling .nav-left a:hover, .nav-subpage .nav-left a:hover, .nav-subpage .nav-right a:hover {
+	color: var(--pink-color);
 }
 
 .nav-logo {
@@ -159,8 +171,13 @@ nav {
 	right: 0;
 	width: 50%;
 	font-size: 1em;
-	background: rgba(256, 256, 256, .95);
-	box-shadow: 3px 3px 1px rgba(0, 0, 0, .3);
+	background: white;
+	text-align: center;
+	box-shadow: -1px 1px 3px rgba(0, 0, 0, .3);
+}
+
+.nav-scrolling .nav-right > a.nav-hamburger > svg > path {
+	color: white;
 }
 
 .nav-responsive a {
@@ -352,6 +369,10 @@ footer a:hover > svg > path, footer a:hover > span {
 
 /* Selected projects section */
 
+#featured-projects h2, #featured-projects hr {
+	margin-left: 15px;
+}
+
 .portfolio-item {
 	display: flex;
 	text-align: center;
@@ -473,11 +494,18 @@ footer a:hover > svg > path, footer a:hover > span {
 
 .about-item h5 {
 	font-weight: 700;
-	margin: 20px auto;
+	text-transform: uppercase;
 }
 
-.about-item.bottom {
-	align-self: flex-end;
+.about-item.skills {
+	padding: 20px;
+	margin: 0;
+	min-width: 25%;
+}
+
+.flex-grid.nowrap.skills {
+	align-items: flex-end;
+	margin-left: 170px;
 }
 
 .headshot {
@@ -490,6 +518,20 @@ footer a:hover > svg > path, footer a:hover > span {
 	opacity: .9;
 	margin: 0 20px 0 0;
 	border-radius: 250px;
+}
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+.arrow-right {
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	width: 0; 
+	height: 0; 
+	border-top: 200px solid transparent;
+	border-bottom: 200px solid transparent;
+  	border-left: 200px solid var(--pink-color);
 }
 
 /* Portfolio subpage */
@@ -562,6 +604,9 @@ div.section.portfolio {
 	.portfolio-item.plant, .portfolio-item.dream, .portfolio-item.blackjack  {
 		font-size: .9em;
 	}
+	.flex-grid.nowrap.skills {
+		margin-left: 0;
+	}
 }
 
 /* Mid sized */
@@ -570,9 +615,9 @@ div.section.portfolio {
 		letter-spacing: .75px;
 	}
 
-/*	.green-icon {
-		font-size: 2em;
-	}*/
+	.flex-grid.nowrap.skills {
+		align-items: flex-start;
+	}
 
 	div.section {
 		padding: 20px;
@@ -620,11 +665,11 @@ div.section.portfolio {
 /* Mobile */
 @media all and (max-width: 500px){
 	h1, h2 {
-		letter-spacing: -.75px;
+		letter-spacing: -1px;
 	}
 	/* Need to test the spacing more */
 	.header-background {
-		transform: skewY(52deg);
+		transform: skewY(58deg);
 	}
 
 	.header-content {
@@ -635,6 +680,9 @@ div.section.portfolio {
 	}
 	.header-content h4 {
 		font-size: .75em;
+	}
+	header {
+		height: 85vh;
 	}
 	.portfolio-item .portfolio-text {
 		padding: 20px;
@@ -651,4 +699,5 @@ div.section.portfolio {
 		display: block;
 		margin-top: 10px;
 	}
+
 }
