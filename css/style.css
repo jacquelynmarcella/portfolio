@@ -259,6 +259,7 @@ header {
 }
 
 .header-content {
+	text-align: center;
 	display: inline-block;
 	margin: 0 auto;
 	transition: all .5s;
@@ -275,6 +276,8 @@ header h1 {
 header h4 {
 	display: inline-block;
 	margin: 0 auto;
+	text-transform: uppercase;
+	font-size: .5em;
 	line-height: 1.5em;
 	font-weight: 500;
 	white-space: nowrap;
@@ -350,22 +353,30 @@ footer a:hover > svg > path, footer a:hover > span {
 /* Selected projects section */
 
 .portfolio-item {
+	display: flex;
 	text-align: center;
-	height: 250px;
+	height: 200px;
 	transition: all 2s;
 	margin: 10px;
 	box-sizing: border-box;
+	align-items: center;
 }
 
 .portfolio h1 {
 	font-size: 3em;
-	line-height: 1em;
+/*	line-height: 1em;*/
 	margin: .25em auto;
 }
 
-.portfolio-item h3 {
+.portfolio-item .portfolio-text {
+	margin: 0 auto;
+	width: 100%;
 	letter-spacing: 1px;
-	line-height: 250px;
+}
+
+.portfolio-item h5 {
+	display: block;
+	width: 100%;
 }
 
 .portfolio-item.dream  {
@@ -400,11 +411,11 @@ footer a:hover > svg > path, footer a:hover > span {
 	text-transform: uppercase;
 }
 
-.portfolio-item.dream h3 {
+.portfolio-item.dream h3, .portfolio-item.dream h5 {
 	color: rgba(68, 73, 82, .9);
 }
 
-.portfolio-item.blackjack h3 {
+.portfolio-item.blackjack h3, .portfolio-item.blackjack h5, .portfolio-item.plant h5 {
 	color: white;
 }
 
@@ -474,8 +485,8 @@ footer a:hover > svg > path, footer a:hover > span {
 }
 
 .headshot img {
-	height: 15em;
-	width: 15em;
+	height: 18em;
+	width: 18em;
 	opacity: .9;
 	margin: 0 20px 0 0;
 	border-radius: 250px;
@@ -549,7 +560,7 @@ div.section.portfolio {
 
 @media all and (max-width: 835px){
 	.portfolio-item.plant, .portfolio-item.dream, .portfolio-item.blackjack  {
-		font-size: .6em;
+		font-size: .9em;
 	}
 }
 
@@ -594,11 +605,11 @@ div.section.portfolio {
 	.portfolio-item {
 		height: 200px;
 	}
-
+/*
 	.portfolio-item h3 {
 		line-height: 200px;
 	}
-
+*/
 	.portfolio-images img {
 		height: auto;
 		max-width: 95%;
@@ -609,11 +620,11 @@ div.section.portfolio {
 /* Mobile */
 @media all and (max-width: 500px){
 	h1, h2 {
-		letter-spacing: -.5px;
+		letter-spacing: -.75px;
 	}
 	/* Need to test the spacing more */
 	.header-background {
-		transform: skewY(58deg);
+		transform: skewY(52deg);
 	}
 
 	.header-content {
@@ -621,6 +632,19 @@ div.section.portfolio {
 		padding: 50px;
 		font-size: .6em;
 		line-height: 1em;
+	}
+	.header-content h4 {
+		font-size: .75em;
+	}
+	.portfolio-item .portfolio-text {
+		padding: 20px;
+	}
+	.portfolio-item h3 {
+		font-size: 2em;
+		padding: 0px 10px;
+	}
+	.portfolio-item h5 {
+		font-size: 1em;
 	}
 
 	.back-next-buttons a {
