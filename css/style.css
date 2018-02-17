@@ -107,7 +107,6 @@ nav {
   	font-weight: 900;
 }
 
-<<<<<<< HEAD
 .nav-subpage {
 	background: var(--green-color);
 }
@@ -118,15 +117,14 @@ nav {
 
 .nav-scrolling {
 	background: var(--green-color);
-	font-size: .85em;
-=======
+}
+
 .nav-logo {
 	font-family: var(--header-font);
 	letter-spacing: .75px;
 	font-size: 1.75em;
 	position: relative;
 	top: 2px;
->>>>>>> master
 }
 
 .nav-left, .nav-right {
@@ -177,15 +175,12 @@ nav {
 
 .nav-scrolling .nav-right a:hover, .nav-scrolling .nav-left a:hover, .nav-subpage .nav-left a:hover, .nav-subpage .nav-right a:hover {
 	color: var(--pink-color);
-<<<<<<< HEAD
 }
 
 .nav-logo {
 	font-family: var(--header-font);
 	font-size: 1.55em;
 	letter-spacing: .75px;
-=======
->>>>>>> master
 }
 
 .hamburger {
@@ -491,7 +486,6 @@ footer a:hover > svg > path, footer a:hover > span {
 .about-item h5 {
 	font-weight: 700;
 	text-transform: uppercase;
-<<<<<<< HEAD
 }
 
 .about-item.skills {
@@ -500,16 +494,6 @@ footer a:hover > svg > path, footer a:hover > span {
 	min-width: 25%;
 }
 
-=======
-}
-
-.about-item.skills {
-	padding: 20px;
-	margin: 0;
-	min-width: 25%;
-}
-
->>>>>>> master
 .flex-grid.nowrap.skills {
 	align-items: flex-end;
 	margin-left: 170px;
