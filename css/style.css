@@ -511,6 +511,7 @@ ul {
 /* Portfolio subpage */
 
 div.section.portfolio {
+	padding: 20px;
 	margin-top: 80px;
 }
 
@@ -648,22 +649,28 @@ div.section.portfolio {
 		font-size: .6em;
 		line-height: 1em;
 	}
+	
 	.header-content h4 {
 		font-size: .75em;
 	}
+
 	header {
 		height: 85vh;
 	}
+
 	.arrow-right {
 		margin-top: -30px;
 	}
+
 	.portfolio-item .portfolio-text {
 		padding: 20px;
 	}
+
 	.portfolio-item h3 {
 		font-size: 2em;
 		padding: 0px 10px;
 	}
+
 	.portfolio-item h5 {
 		font-size: 1em;
 	}
