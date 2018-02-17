@@ -16,9 +16,10 @@ $(".portfolio-item").click(function() {
 });
 
 // Responsive Navbar
-$(".nav-hamburger").click(function(event){
+$(".hamburger").click(function(event){
   event.preventDefault();
-  $(".nav-responsive").toggle("blind", 500);
+  $(".nav-responsive").toggle("slide", { direction: "right" }, 500);
+  $(".hamburger").toggleClass("is-active");
 });
 
 $(".nav-responsive a").click(function() {
