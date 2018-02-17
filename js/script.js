@@ -31,8 +31,9 @@ $(window).resize(function(){
 });
 
 function checkSize(){
-    if ($(".nav-hamburger").css("display") == "none" ){
+    if ($(".hamburger").css("display") == "none" ){
         $(".nav-responsive").hide();
+        $(".hamburger").removeClass("is-active");
     }
 }
 
