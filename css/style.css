@@ -74,7 +74,6 @@ hr {
 
 div.section {
 	margin: 0 auto;
-	min-height: 100vh;
 	padding: 50px 0 80px 0;
 	max-width: 850px;
 	box-sizing: border-box;
@@ -182,7 +181,7 @@ nav {
 	display: none;
 	position: absolute;
 	top: 65px;
-	padding-top: 50px;
+	padding-top: 30px;
 	right: 0;
 	width: 100%;
 	height: 100vh;
@@ -195,6 +194,11 @@ nav {
 	color: var(--font-color);
 	display: block;
 	padding: 30px;
+}
+
+.nav-responsive .nav-contact {
+	display: inline-block;
+	font-size: 1.5em;
 }
 
 .nav-resume {
@@ -358,7 +362,7 @@ footer a:hover > svg > path, footer a:hover > span {
 
 .portfolio h1 {
 	font-size: 3em;
-/*	line-height: 1em;*/
+	line-height: 1em;
 	margin: .25em auto;
 }
 
@@ -424,6 +428,7 @@ footer a:hover > svg > path, footer a:hover > span {
 .back-next-buttons {
 	text-align: center;
 	padding: 20px;
+	margin-bottom: 40px;
 }
 
 .button {
@@ -433,21 +438,15 @@ footer a:hover > svg > path, footer a:hover > span {
 }
 
 .button a, .back-next-buttons a {
+	text-align: center;
+	display: inline-block;
+	width: 100px;
 	font-weight: 700;
 	color: #407257;
 	text-decoration: none;
-	padding: 8px;
+	padding: 5px;
 	border: 2px solid #407257;
 	transition: all 1s;
-}
-
-.back-next-buttons > a > svg > path {
-	color: var(--green-color);
-	transition: all 1s;
-}
-
-.back-next-buttons > a:hover > svg > path {
-	color: white;
 }
 
 .button a:hover, .back-next-buttons a:hover {
@@ -505,7 +504,7 @@ ul {
 	border-top: 250px solid transparent;
 	border-bottom: 250px solid transparent;
   	border-left: 250px solid var(--pink-color);
-  	margin-top: -75px;
+  	margin-top: -85px;
 }
 
 /* Portfolio subpage */
@@ -535,11 +534,17 @@ div.section.portfolio {
 /* Large monitors */
 @media all and (min-width: 1400px){
 	.header-content {
-		font-size: 3.25em;
+		font-size: 1.25em;
 		line-height: 1.75em;
 	}
 	div.section {
 		max-width: 1000px;
+	}
+	.arrow-right {
+		border-top: 350px solid transparent;
+		border-bottom: 350px solid transparent;
+	  	border-left: 350px solid var(--pink-color);
+	  	margin-top: -180px;
 	}
 
 }
@@ -606,6 +611,7 @@ div.section.portfolio {
 
 	footer p {
 		display: block;
+		text-align: left;
 	}
 
 	footer {
@@ -673,11 +679,6 @@ div.section.portfolio {
 
 	.portfolio-item h5 {
 		font-size: 1em;
-	}
-
-	.back-next-buttons a {
-		display: block;
-		margin-top: 10px;
 	}
 
 }
