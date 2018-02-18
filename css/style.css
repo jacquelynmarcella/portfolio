@@ -173,7 +173,7 @@ nav {
 }
 
 .nav-scrolling .nav-right a:hover, .nav-scrolling .nav-left a:hover, .nav-subpage .nav-left a:hover, .nav-subpage .nav-right a:hover {
-	color: var(--pink-color);
+	color: white;
 }
 
 .nav-logo {
@@ -495,7 +495,7 @@ footer a:hover > svg > path, footer a:hover > span {
 
 .flex-grid.nowrap.skills {
 	align-items: flex-end;
-	margin-left: 170px;
+	margin-left: 140px;
 }
 
 .headshot {
@@ -523,6 +523,7 @@ ul {
 	border-bottom: 250px solid transparent;
   	border-left: 250px solid var(--pink-color);
   	margin-top: -85px;
+  	transition: all 2s;
 }
 
 /* Portfolio subpage */
@@ -624,7 +625,7 @@ div.section.portfolio {
 	}
 
 	div.section.portfolio {
-		margin-top: 100px;
+		margin-top: 90px;
 	}
 
 	footer p {
@@ -659,7 +660,7 @@ div.section.portfolio {
 
 /* Mobile */
 @media all and (max-width: 500px){
-	h1, h2 {
+	h1, h2, footer h4 {
 		letter-spacing: -1px;
 		font-size: 1.75em;
 	}
@@ -684,7 +685,7 @@ div.section.portfolio {
 	}
 
 	.arrow-right {
-		margin-top: -30px;
+		margin-top: 0px;
 	}
 
 	.portfolio-item .portfolio-text {
