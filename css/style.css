@@ -643,6 +643,7 @@ div.section.portfolio {
 @media all and (max-width: 500px){
 	h1, h2 {
 		letter-spacing: -1px;
+		font-size: 1.75em;
 	}
 	/* Need to test the spacing more */
 	.header-background {

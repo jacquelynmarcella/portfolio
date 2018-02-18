@@ -24,6 +24,7 @@ $(".hamburger").click(function(event){
 
 $(".nav-responsive a").click(function() {
   $(".nav-responsive").toggle();
+  $(".hamburger").toggleClass("is-active");
 });
 
 $(window).resize(function(){
