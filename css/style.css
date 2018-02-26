@@ -689,7 +689,7 @@ div.section.portfolio {
 	}
 
 	@keyframes sizein {
-  		0%   { transform: skewY(0deg); }
+  		0%   { transform: skewY(0deg); transform-origin: top right; }
   		100% { transform: skewY(58deg); }
 	}
 
@@ -732,6 +732,7 @@ div.section.portfolio {
 
 	.project-arrow.scrolling {
 		display: inline-block;
+		animation: fadein 1s;
 	}
 
 }
