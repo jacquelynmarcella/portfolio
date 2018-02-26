@@ -370,7 +370,7 @@ footer a:hover > svg > path, footer a:hover > span {
 	margin: 10px;
 	box-sizing: border-box;
 	align-items: center;
-	animation: fadein 2s ease-in;
+	animation: fadein 3s ease-in;
 }
 
 .portfolio h1 {
@@ -611,6 +611,17 @@ div.section.portfolio {
 	.hamburger {
 		display: inline-block;
 	}
+	div.section {
+		padding: 20px;
+		margin: 30px auto;
+		width: 100%;
+	}
+
+	div.section.portfolio {
+		padding: 35px;
+		margin-top: 70px;
+	}
+
 }
 
 @media all and (max-width: 835px){
@@ -628,6 +639,7 @@ div.section.portfolio {
 		margin: 0;
 		font-size: .9em;
 	}
+
 }
 
 /* Mid sized */
@@ -635,16 +647,6 @@ div.section.portfolio {
 /*	h1, h2 {
 		letter-spacing: .75px;
 	}*/
-
-	div.section {
-		padding: 20px;
-		margin: 30px auto;
-		width: 100%;
-	}
-
-	div.section.portfolio {
-		margin-top: 70px;
-	}
 
 	footer p {
 		display: block;
@@ -723,9 +725,9 @@ div.section.portfolio {
 	.portfolio-item h5 {
 		font-size: 1em;
 	}
-
+/*
 	.project-arrow {
 		display: none;
-	}
+	}*/
 
 }
