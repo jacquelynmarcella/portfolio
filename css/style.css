@@ -689,7 +689,7 @@ div.section.portfolio {
 	}
 
 	@keyframes sizein {
-  		0%   { transform: skewY(88deg); }
+  		0%   { transform: skewY(0deg); }
   		100% { transform: skewY(58deg); }
 	}
 
