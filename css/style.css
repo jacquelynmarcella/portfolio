@@ -287,8 +287,8 @@ header h1 {
 	display: inline-block;
 	text-transform: uppercase;
 	margin: 0 auto;
-	padding: 20px 0;
-	line-height: 1em;
+	padding: 10px 0;
+	line-height: 1.1em;
 	letter-spacing: 2px;
 }
 
@@ -531,7 +531,6 @@ ul {
 	border-top: 250px solid transparent;
 	border-bottom: 250px solid transparent;
   	border-left: 250px solid var(--pink-color);
-/*  	margin-top: -50px;*/
   	transition: all 2s;
 }
 
@@ -552,8 +551,8 @@ div.section.portfolio {
 }
 
 .portfolio-images img {
-	height: 320px;
-	max-width: 100%;
+	object-fit: contain;
+	width: 100%;
 	margin: 5px;
 }
 
@@ -561,19 +560,16 @@ div.section.portfolio {
 	position: fixed;
     top: 50vh;
     z-index: 98;
-    opacity: .9;
+    opacity: .95;
     font-size: 4em;
-/*    background: white;*/
 }
 
 .project-arrow.back {
 	left: 20px;
-	padding: 5px 15px 5px 10px;
 }
 
 .project-arrow.forward {
 	right: 20px;
-	padding: 5px 10px 5px 15px;
 }
 
 /* Responsive */
@@ -685,10 +681,10 @@ div.section.portfolio {
 		height: 200px;
 	}
 
-	.portfolio-images img {
+/*	.portfolio-images img {
 		height: auto;
 		width: 100%;
-	}
+	}*/
 
 }
 
@@ -737,24 +733,6 @@ div.section.portfolio {
 
 	.project-arrow {
 		display: none;
-	}
-/*
-	.project-arrow.right {
-		right: 50px;
-	}*/
-
-	a.project-arrow.scrolling > svg > path {
-		color: white;
-	}
-
-	.project-arrow.scrolling {
-		display: inline-block;
-		font-size: 2em;
-		background: var(--font-color);
-		border-radius: 100px;
-		text-align: center;
-		width: .5em;
-		height: 1em;
 	}
 
 }
