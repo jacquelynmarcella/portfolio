@@ -1,7 +1,7 @@
 // Navbar adjusts when you scroll
 $(window).scroll(function() {
   var height = $(window).scrollTop();
-  if(height  > 50 && $(".project-arrow").css("display") == "none") {
+  if(height  > 20 && $(".project-arrow").css("display") == "none") {
     $('.project-arrow').addClass('scrolling');
   }
   else if(height  > 300) {

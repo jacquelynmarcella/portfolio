@@ -704,13 +704,8 @@ div.section.portfolio {
 	}*/
 	.header-background {
 		transform: skewY(58deg);
+		animation: none;
 	}
-
-	@keyframes sizein {
-  		0%   { transform: skewY(0deg); transform-origin: bottom right; }
-  		100% { transform: skewY(58deg); }
-	}
-
 
 	.header-content {
 		width: 100%;
