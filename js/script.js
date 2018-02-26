@@ -3,9 +3,13 @@ $(window).scroll(function() {
   var height = $(window).scrollTop();
   if(height  > 300) {
     $('nav').addClass('nav-scrolling');
+    if ($(".project-arrow").css("display") == "none" ){
+        $('.project-arrow').addClass('scrolling');
+    }
   }
   else {
     $('nav').removeClass('nav-scrolling');
+    $('.project-arrow').removeClass('scrolling');
   }
 });
 

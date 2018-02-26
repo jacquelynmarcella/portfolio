@@ -548,7 +548,7 @@ div.section.portfolio {
 .project-arrow {
 	position: fixed;
     top: 50vh;
-    z-index: 99;
+    z-index: 98;
     opacity: .7;
     padding: 5px 10px;
     background: var(--pink-color);
@@ -619,7 +619,7 @@ div.section.portfolio {
 
 	div.section.portfolio {
 		padding: 35px;
-		margin-top: 70px;
+		margin-top: 60px;
 	}
 
 }
@@ -725,9 +725,13 @@ div.section.portfolio {
 	.portfolio-item h5 {
 		font-size: 1em;
 	}
-/*
+
 	.project-arrow {
 		display: none;
-	}*/
+	}
+
+	.project-arrow.scrolling {
+		display: inline-block;
+	}
 
 }
