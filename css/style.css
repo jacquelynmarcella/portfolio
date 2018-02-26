@@ -71,12 +71,15 @@ hr {
 
 /* Flexbox and general grid settings */
 
-div.section {
-	margin: 0 auto;
-	padding: 50px 0 80px 0;
+div.section, .portfolio-images {
+	margin: 40px auto;
 	max-width: 850px;
 	box-sizing: border-box;
 	transition: all 2s;
+}
+
+.portfolio-images {
+	margin: 0 auto;
 }
 
 .flex-grid {
@@ -458,8 +461,8 @@ footer a:hover > svg > path, footer a:hover > span {
 
 .button a:hover, .back-next-buttons a:hover {
 	color: white;
-	background: var(--orange-color);
-	border: 2px solid var(--orange-color);
+	background: var(--green-color);
+	border: 2px solid var(--green-color);
 }
 
 
@@ -518,24 +521,30 @@ ul {
 
 /* Portfolio subpage */
 
-div.section.portfolio {
+div.section.portfolio, .portfolio-images {
 	padding: 20px;
-	margin-top: 80px;
+	margin: 0 auto;
+}
+
+
+div.section.portfolio h1 {
+	margin-top: 100px;
 }
 
 .portfolio p {
 	margin: 10px auto;
 }
 
-.portfolio-images {
-	margin: 20px auto;
-	text-align: center;
-}
-
 .portfolio-images img {
 	object-fit: contain;
 	width: 100%;
-	margin: 5px;
+	margin: 5px 0;
+	animation: fadein 3s;
+}
+
+.portfolio-images.small img {
+	width: 30%;
+	display: inline-block;
 }
 
 .project-arrow {
@@ -611,8 +620,14 @@ div.section.portfolio {
 
 	div.section.portfolio {
 		padding: 10px 35px;
-		margin-top: 80px;
 	}
+
+	.portfolio-images {
+		padding: 0;
+		margin: 0;
+		max-width: 100%;
+	}
+
 
 }
 
@@ -663,19 +678,11 @@ div.section.portfolio {
 		height: 200px;
 	}
 
-/*	.portfolio-images img {
-		height: auto;
-		width: 100%;
-	}*/
-
 }
 
 /* Mobile */
 @media all and (max-width: 500px){
-/*	h1, h2, footer h4 {
-		letter-spacing: -1px;
-		font-size: 1.75em;
-	}*/
+
 	.header-background {
 		transform: skewY(58deg);
 		animation: none;
@@ -716,5 +723,6 @@ div.section.portfolio {
 	.project-arrow {
 		display: none;
 	}
+
 
 }
