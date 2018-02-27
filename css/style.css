@@ -35,7 +35,7 @@ a:hover {
 	color: var(--orange-color);
 }
 
-h1, h2 {
+h1, h2, h3 {
 	font-family: var(--header-font);
 /*	font-weight: 900;*/
 }
@@ -234,7 +234,7 @@ body > nav > div.nav-right > a.nav-resume.nav-desktop > svg > path {
 	font-size: 2.25em;
 	background: var(--pink-color);
 	line-height: 2em;
-	transform: skewY(26deg);
+	transform: skewY(25.5deg);
   	transform-origin: top right;
   	transition: all 1.5s;
   	position: absolute;
@@ -246,7 +246,7 @@ body > nav > div.nav-right > a.nav-resume.nav-desktop > svg > path {
 
 @keyframes sizein {
   0%   { transform: skewY(56deg); }
-  100% { transform: skewY(26deg); }
+  100% { transform: skewY(25.5deg); }
 }
 
 header {
@@ -277,14 +277,13 @@ header h1 {
 	text-transform: uppercase;
 	margin: 0 auto;
 	line-height: 1.1em;
-	letter-spacing: 3px;
 }
 
 header h4 {
 	display: inline-block;
 	margin: 0 auto;
 	text-transform: capitalize;
-	font-size: .5em;
+	font-size: .45em;
 	font-weight: 500;
 	white-space: nowrap;
 }
@@ -540,7 +539,8 @@ div.section.portfolio h1 {
 }
 
 .portfolio p {
-	margin: 10px auto;
+	margin: 5px auto;
+	width: 100%;
 }
 
 .portfolio-images img {
@@ -584,12 +584,12 @@ div.section.project-nav {
 /* Large monitors */
 @media all and (min-width: 1400px){
 	.header-background {
-		transform: skewY(24deg);
+		transform: skewY(24.5deg);
 	}
 
 	@keyframes sizein {
   		0%   { transform: skewY(54deg); }
-  		100% { transform: skewY(24deg); }
+  		100% { transform: skewY(24.5deg); }
 	}
 
 	.header-content {
@@ -733,7 +733,7 @@ div.section.project-nav {
 	}
 	
 	.header-content h4 {
-		font-size: .75em;
+		font-size: .5em;
 		line-height: 2.25em;
 	}
 
