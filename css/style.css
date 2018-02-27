@@ -426,7 +426,7 @@ footer a:hover > svg > path, footer a:hover > span {
 .portfolio-item.blackjack {
 	flex-grow: 2;
 	min-width: 100px;
-	background: url('../img/492231080.jpg') no-repeat;
+	background: url('../img/blackjack-background.jpg') no-repeat;
   	transition: all 2s;
   	background-size: 180%;
   	background-position: 50% 50%;
@@ -453,18 +453,13 @@ footer a:hover > svg > path, footer a:hover > span {
 
 /* Buttons */
 
-.back-next-buttons {
-	text-align: center;
-	margin: 20px auto 50px auto;
-}
-
 .button {
 	margin: 0 auto;
 	margin-right: 0;
 	align-self: center;
 }
 
-.button a, .back-next-buttons a {
+.button a {
 	text-align: center;
 	display: inline-block;
 	width: 100px;
@@ -476,7 +471,7 @@ footer a:hover > svg > path, footer a:hover > span {
 	transition: all .5s;
 }
 
-.button a:hover, .back-next-buttons a:hover {
+.button a:hover {
 	color: white;
 	background: var(--green-color);
 	border: 2px solid var(--green-color);
@@ -543,10 +538,16 @@ ul {
 
 /* Portfolio subpage */
 
-div.section.portfolio, .portfolio-images {
+div.section.portfolio {
 	padding: 20px;
 	margin: 0 auto;
 }
+
+.portfolio-images {
+	padding: 0 20px;
+	margin: 0 auto;
+}
+
 
 
 div.section.portfolio h1 {
@@ -560,13 +561,8 @@ div.section.portfolio h1 {
 .portfolio-images img {
 	object-fit: contain;
 	width: 100%;
-	margin: 5px 0;
+	margin: 0;
 	animation: fadein 3s;
-}
-
-.portfolio-images.small img {
-	width: 30%;
-	display: inline-block;
 }
 
 .project-arrow {
@@ -585,15 +581,19 @@ div.section.portfolio h1 {
 	right: 20px;
 }
 
+div.section.project-nav {
+		margin: 30px auto 40px auto;
+}
+
 /* Responsive */
 
 /* Large monitors */
 @media all and (min-width: 1400px){
 	.header-content {
-		font-size: 1.5em;
+		font-size: 1em;
 	}
 
-	div.section {
+	div.section, .portfolio-images {
 		max-width: 1000px;
 	}
 	
@@ -646,8 +646,10 @@ div.section.portfolio h1 {
 	}
 
 	.portfolio-images {
-		padding: 0;
-		margin: 0;
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: 0;
+		margin-right: 0;
 		max-width: 100%;
 	}
 
@@ -700,6 +702,15 @@ div.section.portfolio h1 {
 		height: 200px;
 	}
 
+	.project-arrow {
+		display: none;
+	}
+
+	div.section.project-nav {
+		margin: 10px auto 20px auto;
+	}
+
+
 }
 
 /* Mobile */
@@ -708,6 +719,7 @@ div.section.portfolio h1 {
 	.header-background {
 		transform: skewY(58deg);
 		animation: none;
+		height: 90vh;
 	}
 
 	.header-content {
@@ -741,10 +753,5 @@ div.section.portfolio h1 {
 	.portfolio-item h5 {
 		font-size: 1em;
 	}
-
-	.project-arrow {
-		display: none;
-	}
-
 
 }
