@@ -135,7 +135,7 @@ nav {
 
 .nav-left {
 	text-align: left;
-	left: 20px;
+	left: 25px;
 }
 
 .nav-right {
@@ -157,8 +157,12 @@ nav {
 
 .nav-right a, .nav-left a {
 	text-transform: none;
-	margin: 0 20px;
+	margin: 0;
 	color: var(--font-color);
+}
+
+.nav-right a {
+	margin-left: 20px;
 }
 
 .nav-scrolling .nav-right a, .nav-scrolling .nav-right a, .nav-scrolling .nav-logo {
@@ -549,10 +553,8 @@ div.section.portfolio {
 	margin: 0 auto;
 }
 
-
-
 div.section.portfolio h1 {
-	margin-top: 100px;
+	margin-top: 90px;
 }
 
 .portfolio p {
@@ -583,13 +585,31 @@ div.section.portfolio h1 {
 }
 
 div.section.project-nav {
-		margin: 30px auto 40px auto;
+	margin: 30px auto 40px auto;
+	padding: 0 20px;
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.project-nav p {
+	display: inline-block;
+	border: 1px red;
 }
 
 /* Responsive */
 
 /* Large monitors */
 @media all and (min-width: 1400px){
+	.header-background {
+		transform: skewY(24deg);
+	}
+
+	@keyframes sizein {
+  		0%   { transform: skewY(54deg); }
+  		100% { transform: skewY(24deg); }
+	}
+
 	.header-content {
 		font-size: 1em;
 	}
@@ -637,13 +657,13 @@ div.section.project-nav {
 		display: inline-block;
 	}
 	div.section {
-		padding: 20px;
+		padding: 10px;
 /*		margin: 30px auto;*/
 		width: 100%;
 	}
 
 	div.section.portfolio {
-		padding: 20px 35px;
+		padding: 20px 25px;
 	}
 
 	.portfolio-images {
@@ -718,7 +738,7 @@ div.section.project-nav {
 @media all and (max-width: 500px){
 
 	.header-background {
-		transform: skewY(58deg);
+		transform: skewY(57deg);
 		animation: none;
 		height: 90vh;
 	}
