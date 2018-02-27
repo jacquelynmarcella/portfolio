@@ -408,7 +408,7 @@ footer a:hover > svg > path, footer a:hover > span {
 .portfolio-item.blackjack {
 	flex-grow: 2;
 	min-width: 100px;
-	background: url('../img/492231080.jpg') no-repeat;
+	background: url('../img/blackjack-background.jpg') no-repeat;
   	transition: all 2s;
   	background-size: 180%;
   	background-position: 50% 50%;
@@ -520,10 +520,16 @@ ul {
 
 /* Portfolio subpage */
 
-div.section.portfolio, .portfolio-images {
+div.section.portfolio {
 	padding: 20px;
 	margin: 0 auto;
 }
+
+.portfolio-images {
+	padding: 0 20px;
+	margin: 0 auto;
+}
+
 
 
 div.section.portfolio h1 {
@@ -558,7 +564,7 @@ div.section.portfolio h1 {
 }
 
 div.section.project-nav {
-		margin: 20px auto 40px auto;
+		margin: 30px auto 40px auto;
 }
 
 /* Responsive */
@@ -566,7 +572,7 @@ div.section.project-nav {
 /* Large monitors */
 @media all and (min-width: 1400px){
 	.header-content {
-		font-size: 1.5em;
+		font-size: 1em;
 	}
 
 	div.section, .portfolio-images {
@@ -683,7 +689,7 @@ div.section.project-nav {
 	}
 
 	div.section.project-nav {
-		margin: 0px auto 20px auto;
+		margin: 10px auto 20px auto;
 	}
 
 
@@ -695,6 +701,7 @@ div.section.project-nav {
 	.header-background {
 		transform: skewY(58deg);
 		animation: none;
+		height: 90vh;
 	}
 
 	.header-content {
