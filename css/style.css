@@ -317,6 +317,7 @@ footer {
 	width: 100%;
   	box-sizing: border-box;
   	margin: 0;
+  	margin-top: 20px;
   	padding: 70px 40px;
   	text-align: center;
   	background: var(--pink-color);
@@ -624,7 +625,7 @@ div.section.project-nav {
 	}
 
 	div.section.portfolio {
-		padding: 10px 35px;
+		padding: 20px 35px;
 	}
 
 	.portfolio-images {
@@ -708,11 +709,12 @@ div.section.project-nav {
 		width: 100%;
 		padding: 50px;
 		font-size: .6em;
-		line-height: 1em;
+/*		line-height: 1em;*/
 	}
 	
 	.header-content h4 {
 		font-size: .75em;
+		line-height: 2.25em;
 	}
 
 	header {
@@ -729,6 +731,7 @@ div.section.project-nav {
 
 	.portfolio-item h3 {
 		font-size: 2em;
+		line-height: 1.2em;
 		padding: 0px 10px;
 	}
 
