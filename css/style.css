@@ -438,7 +438,6 @@ footer a:hover > svg > path, footer a:hover > span {
 
 .portfolio-item.plant h3 {
 	color: #E3CB43;
-	text-transform: uppercase;
 }
 
 .portfolio-item.dream h3, .portfolio-item.dream h5 {
@@ -523,10 +522,12 @@ footer a:hover > svg > path, footer a:hover > span {
 	margin: 0 20px 0 0;
 	border-radius: 250px;
 }
+
 ul {
 	list-style: none;
 	padding-left: 0;
 }
+
 .arrow-right {
 	position: absolute;
 	z-index: -1;
@@ -545,6 +546,10 @@ ul {
 div.section.portfolio {
 	padding: 20px;
 	margin: 0 auto;
+}
+
+div.section.portfolio h5 {
+	font-size: .8em;
 }
 
 .portfolio-images {
